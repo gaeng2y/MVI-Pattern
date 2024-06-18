@@ -11,10 +11,7 @@ import SwiftUI
 struct CounterApp: App {
     var body: some Scene {
         WindowGroup {
-            let initialState = CounterState(count: 0)
-            let intent = CounterIntent()
-            let container = CounterContainer(state: initialState, intent: intent)
-            ContentView(container: container)
+            ContentView()
         }
     }
 }

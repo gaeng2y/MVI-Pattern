@@ -11,7 +11,6 @@
 		CE37C6902C21B45100518D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE37C6872C21B45100518D31 /* Assets.xcassets */; };
 		CE37C6912C21B45100518D31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C6882C21B45100518D31 /* ContentView.swift */; };
 		CE37C6922C21B45100518D31 /* CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C6892C21B45100518D31 /* CounterApp.swift */; };
-		CE37C6932C21B45100518D31 /* CounterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C68A2C21B45100518D31 /* CounterContainer.swift */; };
 		CE37C6942C21B45100518D31 /* CounterIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C68B2C21B45100518D31 /* CounterIntent.swift */; };
 		CE37C6952C21B45100518D31 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37C68C2C21B45100518D31 /* CounterState.swift */; };
 		CEDDB1642C21AD970009FD3E /* MVI_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB1632C21AD970009FD3E /* MVI_exampleTests.swift */; };
@@ -41,10 +40,9 @@
 		CE37C6872C21B45100518D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE37C6882C21B45100518D31 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE37C6892C21B45100518D31 /* CounterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterApp.swift; sourceTree = "<group>"; };
-		CE37C68A2C21B45100518D31 /* CounterContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterContainer.swift; sourceTree = "<group>"; };
 		CE37C68B2C21B45100518D31 /* CounterIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterIntent.swift; sourceTree = "<group>"; };
 		CE37C68C2C21B45100518D31 /* CounterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
-		CE37C68D2C21B45100518D31 /* MVI_example.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MVI_example.entitlements; sourceTree = "<group>"; };
+		CE37C68D2C21B45100518D31 /* CounterApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CounterApp.entitlements; sourceTree = "<group>"; };
 		CEDDB14E2C21AD960009FD3E /* CounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDDB15F2C21AD970009FD3E /* CounterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDDB1632C21AD970009FD3E /* MVI_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVI_exampleTests.swift; sourceTree = "<group>"; };
@@ -93,10 +91,9 @@
 				CE37C6872C21B45100518D31 /* Assets.xcassets */,
 				CE37C6882C21B45100518D31 /* ContentView.swift */,
 				CE37C6892C21B45100518D31 /* CounterApp.swift */,
-				CE37C68A2C21B45100518D31 /* CounterContainer.swift */,
 				CE37C68B2C21B45100518D31 /* CounterIntent.swift */,
 				CE37C68C2C21B45100518D31 /* CounterState.swift */,
-				CE37C68D2C21B45100518D31 /* MVI_example.entitlements */,
+				CE37C68D2C21B45100518D31 /* CounterApp.entitlements */,
 			);
 			path = CounterApp;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 				CE37C6952C21B45100518D31 /* CounterState.swift in Sources */,
 				CE37C6922C21B45100518D31 /* CounterApp.swift in Sources */,
 				CE37C6912C21B45100518D31 /* ContentView.swift in Sources */,
-				CE37C6932C21B45100518D31 /* CounterContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +424,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MVI-example/MVI_example.entitlements";
+				CODE_SIGN_ENTITLEMENTS = CounterApp/CounterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MVI-example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -466,10 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MVI-example/MVI_example.entitlements";
+				CODE_SIGN_ENTITLEMENTS = CounterApp/CounterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MVI-example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

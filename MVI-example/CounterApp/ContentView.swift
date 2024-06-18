@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var container: CounterContainer
-    
-    init(container: CounterContainer) {
-        self._container = State(wrappedValue: container)
-    }
-    
+    @State private var state = CounterState(count: 0)
+    private var intent = CounterIntent()
+
     var body: some View {
         VStack {
-            Text("Count: \(container.state.count)")
+            Text("Count: \(state.count)")
                 .font(.largeTitle)
                 .padding()
-            
+
             HStack {
                 Button(action: {
-                    container.send(.decrement)
+                    state = intent.reduce(state: state, action: .decrement)
                 }) {
                     Text("-")
                         .font(.largeTitle)
@@ -32,9 +29,9 @@ struct ContentView: View {
                         .clipShape(Circle())
                 }
                 .padding()
-                
+
                 Button(action: {
-                    container.send(.increment)
+                    state = intent.reduce(state: state, action: .increment)
                 }) {
                     Text("+")
                         .font(.largeTitle)
@@ -49,7 +46,6 @@ struct ContentView: View {
     }
 }
 
-
 #Preview {
-    ContentView(container: .init(state: .init(count: 0), intent: CounterIntent()))
+    ContentView()
 }

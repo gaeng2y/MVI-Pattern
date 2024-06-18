@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol CounterIntentProtocol {
-    func reduce(state: CounterState, action: CounterAction) -> CounterState
-}
-
-class CounterIntent: CounterIntentProtocol {
+class CounterIntent {
     func reduce(state: CounterState, action: CounterAction) -> CounterState {
         switch action {
         case .increment:
